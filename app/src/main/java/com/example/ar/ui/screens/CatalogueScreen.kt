@@ -93,7 +93,6 @@ fun CatalogueScreen(
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
-                // Header
                 item(span = { GridItemSpan(2) }) {
                     Column {
                         TopBar(
@@ -145,8 +144,7 @@ fun CatalogueScreen(
                     }
                 }
 
-                // Produits
-                val filteredProducts = products.filter { 
+                val filteredProducts = products.filter {
                     it.name.contains(searchQuery, ignoreCase = true) && 
                     (selectedCategory == "Touts" || it.category == selectedCategory)
                 }
@@ -175,7 +173,6 @@ fun CatalogueScreen(
             }
         }
 
-        // Side Menu
         if (isMenuOpen) {
             Box(modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.4f)).clickable { isMenuOpen = false })
 
@@ -248,7 +245,6 @@ fun CatalogueScreen(
             }
         }
 
-        // Bottom Menu
         BottomMenu(
             navController = navController,
             currentRoute = "catalogue",

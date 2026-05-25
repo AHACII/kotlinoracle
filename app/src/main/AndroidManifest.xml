@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"> <!-- هاد السطر ضروري بزاف -->
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -17,7 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
 
-        <!-- هادا هو الحل باش مايبقاش Error ديال Manifest merger failed -->
         <meta-data
             android:name="com.google.ar.core"
             android:value="required"

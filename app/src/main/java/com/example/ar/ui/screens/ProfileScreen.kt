@@ -68,7 +68,6 @@ fun ProfileScreen(
                 .padding(bottom = 80.dp)
         ) {
 
-            // 🔹 TOP BAR
             Column(modifier = Modifier.fillMaxSize().padding(20.dp)) {
                 TopBar(
                     onMenuClick = { isMenuOpen = !isMenuOpen },
@@ -79,7 +78,6 @@ fun ProfileScreen(
 
                 Spacer(modifier = Modifier.height(20.dp))
 
-                // 🔹 AVATAR + INFOS
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally
@@ -108,7 +106,6 @@ fun ProfileScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // 🔹 STATS
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
@@ -120,17 +117,14 @@ fun ProfileScreen(
 
                 Spacer(modifier = Modifier.height(30.dp))
 
-                // 🔹 ACTIONS
                 ProfileActionItem("Mes Projets") { onNavigateToProjects() }
                 ProfileActionItem("Catalogue") { onNavigateToCatalogue() }
 
                 Spacer(modifier = Modifier.height(120.dp))
 
-                // 🔹 LOGOUT
                 SimpleLogoutButton(onClick = onLogout)
             }
         }
-        // 🔥 DRAWER MENU
         if (isMenuOpen) {
 
             Box(

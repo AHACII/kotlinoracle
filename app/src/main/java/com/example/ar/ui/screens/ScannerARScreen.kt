@@ -76,7 +76,6 @@ fun ScannerARScreen(
         }
     }
 
-    // ✅ STRUCTURE PROPRE
     Box(modifier = Modifier.fillMaxSize()) {
 
         if (!hasCameraPermission) {
@@ -97,9 +96,7 @@ fun ScannerARScreen(
 
         } else {
 
-            // ✅ UI NORMALE
 
-            // BACKGROUND
             AndroidView(
                 factory = { context ->
                     val previewView = androidx.camera.view.PreviewView(context)
@@ -132,14 +129,12 @@ fun ScannerARScreen(
                 modifier = Modifier.fillMaxSize()
             )
 
-            // OVERLAY
             Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .background(Color.Transparent)
             )
 
-            // NAVBAR + TITLE
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -184,7 +179,7 @@ fun ScannerARScreen(
                 )
             }
 
-            // CENTRE
+
             Column(
                 modifier = Modifier
                     .align(Alignment.TopCenter)
@@ -238,7 +233,6 @@ fun ScannerARScreen(
                 }
             }
 
-            // BAS
             Column(
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
@@ -276,7 +270,6 @@ fun ScannerARScreen(
                 }
             }
 
-            // MENU BURGER
             if (isMenuOpen) {
                 Box(
                     modifier = Modifier

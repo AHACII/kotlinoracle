@@ -22,9 +22,8 @@ fun BottomMenu(
     currentRoute: String,
     modifier: Modifier = Modifier
 ) {
-    // الألوان ديال الـ Harmony اللي اتفقنا عليها
-    val accentColor = Color(0xFF3D5AFE) // الأزرق الملكي
-    val backgroundColor = Color(0xFFF5F7FA) // رمادي خفيف بزاف
+    val accentColor = Color(0xFF3D5AFE)
+    val backgroundColor = Color(0xFFF5F7FA)
 
     Box(
         modifier = modifier
@@ -39,7 +38,7 @@ fun BottomMenu(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // 1. Home
+
             BottomItem(
                 label = "Accueil",
                 icon = R.drawable.ic_home,
@@ -48,7 +47,6 @@ fun BottomMenu(
                 if (currentRoute != "home") navController.navigate("home")
             }
 
-            // 2. Catalogue
             BottomItem(
                 label = "Catalogue",
                 icon = R.drawable.ic_catalogue,
@@ -57,7 +55,6 @@ fun BottomMenu(
                 if (currentRoute != "catalogue") navController.navigate("catalogue")
             }
 
-            // 3. Profil
             BottomItem(
                 label = "Profil",
                 icon = R.drawable.ic_user,
@@ -66,7 +63,6 @@ fun BottomMenu(
                 if (currentRoute != "profile") navController.navigate("profile")
             }
 
-            // 4. Mes Projets
             BottomItem(
                 label = "Projets",
                 icon = R.drawable.ic_image,
